@@ -4,11 +4,14 @@ import { StyledLink } from '../../utils/style/Atoms'
 
 const NavContainer = styled.nav`
     display: flex;
+    justify-content: space-between;
+    width: 98%;
 `
 
 const NavBar = styled.div`
     display: flex;
     position: relative;
+    align-items: center;
 `
 
 const HomeLogo = styled.img`
