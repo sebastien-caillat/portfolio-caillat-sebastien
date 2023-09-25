@@ -2,9 +2,10 @@ function Home() {
     return (
       <div className="App">
         <header className="App-header">
-          <p>
-            Site
-          </p>
+          <h1>
+            Sébastien Caillat - Développeur Web basé à Paris
+          </h1>
+          <h2>À propos</h2>
         </header>
       </div>
     );

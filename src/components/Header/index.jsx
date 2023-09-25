@@ -27,7 +27,7 @@ function Header() {
                     Accueil
                 </StyledLink>
                 <StyledLink to='/about'>
-                    A Propos
+                    CV
                 </StyledLink>
             </NavBar>
         </NavContainer>
