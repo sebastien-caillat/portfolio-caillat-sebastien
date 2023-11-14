@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home';
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 import GlobalStyle from './utils/style/GlobalStyle';
 // import LinearGradientBasics from './utils/style/gradient';
@@ -18,6 +19,7 @@ root.render(
         <Route exact path='/' element={<Home />}></Route>
       </Routes>
       {/* </LinearGradientBasics> */}
+      <Footer />
     </Router>
   </React.StrictMode>
 );
