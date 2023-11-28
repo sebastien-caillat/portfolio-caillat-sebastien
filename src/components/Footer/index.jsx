@@ -1,11 +1,13 @@
 import styled from "styled-components"
 
+import { FaGithubSquare, FaPhoneAlt, FaLinkedin } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
+
 const Box = styled.div`
-    padding: 5% 2.5%;
     background: #252525;
     position: absolute;
     bottom: 0;
-    width: 95%;
+    width: 100%;
 `;
  
 const FooterContainer = styled.div`
@@ -14,37 +16,28 @@ const FooterContainer = styled.div`
     justify-content: center;
     max-width: 1000px;
     margin: 0 auto;
-    /* background: red; */
 `;
  
 const Column = styled.div`
     display: flex;
     flex-direction: column;
-    text-align: left;
-    margin-left: 60px;
+    text-align: center;
 `;
  
 const Row = styled.div`
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fill,
-        minmax(185px, 1fr)
-    );
-    grid-gap: 20px;
- 
-    @media (max-width: 1000px) {
-        grid-template-columns: repeat(
-            auto-fill,
-            minmax(200px, 1fr)
-        );
-    }
+    display: flex;
+    justify-content: space-between;
 `;
 
-const Heading = styled.p`
-    font-size: 24px;
+const ContactIcons = styled.div`
+    width: 4vh;
+    height: 4vh;
+    font-size: 35px;
     color: #fff;
-    margin-bottom: 40px;
-    font-weight: bold;
+    margin: 10px;
+    &:hover {
+        font-size: 40px;
+    }
 `;
 
 function Footer() {
@@ -54,24 +47,32 @@ function Footer() {
                 style={{
                     color: "#fff",
                     textAlign: "center",
-                    marginTop: "10px",
+                    marginTop: "30px",
                 }}
             >
-                Me contacter
+                Contacts
             </h1>
             <FooterContainer>
                 <Row>
                     <Column>
-                        <Heading>LinkedIn</Heading>
+                        <ContactIcons>
+                            <FaLinkedin />
+                        </ContactIcons>
                     </Column>
                     <Column>
-                        <Heading>GitHub</Heading>
+                        <ContactIcons>
+                            <FaGithubSquare />
+                        </ContactIcons>
                     </Column>
                     <Column>
-                        <Heading>E-mail</Heading>
+                        <ContactIcons>
+                            <IoMdMail />
+                        </ContactIcons>
                     </Column>
                     <Column>
-                        <Heading>Téléphone</Heading>
+                        <ContactIcons>
+                            <FaPhoneAlt />
+                        </ContactIcons>
                     </Column>
                 </Row>
             </FooterContainer>
