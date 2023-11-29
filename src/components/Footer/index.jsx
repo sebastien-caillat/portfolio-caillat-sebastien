@@ -3,6 +3,9 @@ import styled from "styled-components"
 import { FaGithubSquare, FaPhoneAlt, FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
+const linkedInUrl = 'https://www.linkedin.com/in/sebastien-caillat/';
+const githubUrl = 'https://github.com/sebastien-caillat';
+
 const Box = styled.div`
     background: #252525;
     position: absolute;
@@ -55,13 +58,13 @@ function Footer() {
             <FooterContainer>
                 <Row>
                     <Column>
-                        <ContactIcons>
+                        <ContactIcons onClick={() => { window.location.href = linkedInUrl; } }>
                             <FaLinkedin />
                         </ContactIcons>
                     </Column>
                     <Column>
                         <ContactIcons>
-                            <FaGithubSquare />
+                            <FaGithubSquare onClick={() => { window.location.href = githubUrl; } } />
                         </ContactIcons>
                     </Column>
                     <Column>
