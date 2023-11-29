@@ -6,6 +6,7 @@ const NavContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     width: 98%;
+    // border-bottom: 1px solid black;
 `
 
 const NavBar = styled.div`
@@ -26,7 +27,7 @@ function Header() {
                 <StyledLink to='/'>
                     Accueil
                 </StyledLink>
-                <StyledLink to='/about'>
+                <StyledLink onClick={() => { window.location.href = 'https://www.docdroid.net/6PjO6Pt/cv-caillat-sebastien-pdf' } }>
                     CV
                 </StyledLink>
             </NavBar>

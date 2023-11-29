@@ -69,12 +69,12 @@ function Footer() {
                     </Column>
                     <Column>
                         <ContactIcons>
-                            <IoMdMail />
+                            <IoMdMail onClick={() => { window.location.href = 'mailto:sebastien.caillat96@gmail.com' } } />
                         </ContactIcons>
                     </Column>
                     <Column>
                         <ContactIcons>
-                            <FaPhoneAlt />
+                            <FaPhoneAlt onClick={() => { window.location.href = 'callto:0778815580' } } />
                         </ContactIcons>
                     </Column>
                 </Row>
