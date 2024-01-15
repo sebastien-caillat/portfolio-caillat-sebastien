@@ -5,18 +5,20 @@ import { StyledLink } from '../../utils/style/Atoms'
 const NavContainer = styled.nav`
     display: flex;
     justify-content: space-between;
-    width: 98%;
-    // border-bottom: 1px solid black;
+    width: 100%;
+    margin-bottom: -2%;
 `
 
 const NavBar = styled.div`
     display: flex;
     position: relative;
     align-items: center;
+    margin-right: 6%;
 `
 
 const HomeLogo = styled.img`
     height: 250px;
+    margin-left: 4.5%;
 `
 
 function Header() {

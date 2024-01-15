@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 const GlobalContainer = styled.div`
   width: 100%;
+  padding-bottom: 3%;
 `
 
 const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  // width: 90%;
 `
 const PageTitle = styled.h1`
   // align-items: center;
@@ -24,16 +24,19 @@ const InfosBlock = styled.div`
   width: 70%;
   height: auto;
   margin: 3% 0% 0% 15%;
+  padding: 0% 1% 0% 1%;
   padding-left: 1%;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: #CBC3E3;
-  box-shadow: 12px 12px 8px 1px #CBC3E3;
+  background: linear-gradient(160deg, #ffb6c1 2%, #cbc3e3 40%);
+  // background-color: #CBC3E3;
+  box-shadow: 12px 12px 8px 1px #cbc3e3;
 `
+
 const MoreInfosBlock = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 1%;
+  margin-top: 0.5%;
 `
 
 

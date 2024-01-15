@@ -3,7 +3,7 @@ import colors from "./colors";
 
 const StyledGlobalStyle = createGlobalStyle`
     * {
-        font-family: 'Montserrat', serif, sans-serif;
+        font-family: 'League Spartan', serif, sans-serif;
     }
 
     body {
@@ -13,6 +13,15 @@ const StyledGlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         overflow: auto;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 18px;
+        text-align: justify;
     }
 `
 
