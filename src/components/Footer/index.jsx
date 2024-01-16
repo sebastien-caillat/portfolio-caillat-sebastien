@@ -9,7 +9,6 @@ const githubUrl = 'https://github.com/sebastien-caillat';
 const Box = styled.div`
     background: #252525;
     position: absolute;
-    bottom: 0;
     width: 100%;
 `;
  

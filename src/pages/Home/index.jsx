@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const GlobalContainer = styled.div`
   width: 100%;
-  padding-bottom: 3%;
+  padding-bottom: 1%;
 `
 
 const TitleContainer = styled.div`
@@ -19,6 +19,9 @@ const InfosContainer = styled.div`
   grid-column: 2;
   grid-row: 2;
   grid-template-columns: repeat(2, 1fr);
+  @media(max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 const InfosBlock = styled.div`
   width: 70%;
@@ -31,12 +34,18 @@ const InfosBlock = styled.div`
   background: linear-gradient(160deg, #ffb6c1 2%, #cbc3e3 40%);
   // background-color: #CBC3E3;
   box-shadow: 12px 12px 8px 1px #cbc3e3;
+  @media(max-width: 1280px) {
+    margin-bottom: 4%;
+  }
 `
 
 const MoreInfosBlock = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 0.5%;
+  margin-top: 2%;
+  @media(max-width: 1280px) {
+    // width: 50%;
+  }
 `
 
 
