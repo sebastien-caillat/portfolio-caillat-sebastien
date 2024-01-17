@@ -7,18 +7,29 @@ const NavContainer = styled.nav`
     justify-content: space-between;
     width: 100%;
     margin-bottom: -2%;
+    @media(max-width: 768px) {
+        flex-direction: column;
+        margin-bottom: 0%;
+    }
 `
 
 const NavBar = styled.div`
     display: flex;
     position: relative;
     align-items: center;
-    margin-right: 6%;
+    margin-right: 5.2%;
+    @media(max-width: 768px) {
+        justify-content: center;
+        right: 4.5%
+    }
 `
 
 const HomeLogo = styled.img`
     height: 250px;
-    margin-left: 4.5%;
+    margin-left: 3%;
+    @media(max-width: 768px) {
+        margin-left: 0%;
+    }
 `
 
 function Header() {

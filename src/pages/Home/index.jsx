@@ -11,7 +11,32 @@ const TitleContainer = styled.div`
   align-items: center;
 `
 const PageTitle = styled.h1`
-  // align-items: center;
+  background: linear-gradient(to left, #ffb6c1, #cbc3e3 100%);
+  background-position: 0 90%;
+  background-size: 100% 2px;
+  background-repeat: repeat-x; 
+  padding-bottom: 0.5%;
+  margin-bottom: -0.5%;
+  @media(max-width: 768px) {
+    display: none;
+  }
+`
+
+const PageSubtitle = styled.p`
+  font-size: 20px;
+  @media(max-width: 768px) {
+    display: none;
+  }
+`
+
+const AboutMe = styled.h2`
+  font-size: 30px;
+  width: 6.5%;
+  margin-left: 6%;
+  background: linear-gradient(to left, #ffb6c1, #cbc3e3 100%);
+  background-position: 0 100%;
+  background-size: 100% 2px;
+  background-repeat: repeat-x;    
 `
 
 const InfosContainer = styled.div`
@@ -26,9 +51,8 @@ const InfosContainer = styled.div`
 const InfosBlock = styled.div`
   width: 70%;
   height: auto;
-  margin: 3% 0% 0% 15%;
-  padding: 0% 1% 0% 1%;
-  padding-left: 1%;
+  margin: 0% 0% 3% 12%;
+  padding: 0% 3% 0% 3%;
   border: 1px solid black;
   border-radius: 10px;
   background: linear-gradient(160deg, #ffb6c1 2%, #cbc3e3 40%);
@@ -37,14 +61,18 @@ const InfosBlock = styled.div`
   @media(max-width: 1280px) {
     margin-bottom: 4%;
   }
+  @media(max-width: 768px) {
+    width: 90%;
+    margin: 0% 2% 8% 2%;
+  }
 `
 
 const MoreInfosBlock = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 2%;
-  @media(max-width: 1280px) {
-    // width: 50%;
+  @media(max-width: 768px) {
+    display: none;
   }
 `
 
@@ -54,17 +82,20 @@ function Home() {
       <GlobalContainer>
         <TitleContainer>
             <PageTitle>
-              Sébastien Caillat - Développeur Web basé à Paris
+              Sébastien Caillat
             </PageTitle>
-              <h2>
+            <PageSubtitle>
+              Développeur Web
+            </PageSubtitle>
+            </TitleContainer>
+              <AboutMe>
                 À propos
-              </h2>
-        </TitleContainer>
+              </AboutMe>
         <InfosContainer>
                 <InfosBlock>
                   <h3> Mon parcours </h3>
                     <p>
-                      Nouvellement diplômé de la formation Développeur Web d’Openclassrooms, je suis à la recherche d’un premier emploi dans ce domaine. Ayant eu l’opportunité d’acquérir de nombreuses compétences grâce aux projets réalisés durant cette formation, j’ai à cœur de les mettre au plus vite en pratique.
+                      Après des études littéraires et notamment l'obtention d'une licence en Lettres & Sciences Humaines, j'ai décidé de me réorienter dans le domaine du développement web à la recherche de challenge.Nouvellement diplômé de la formation Développeur Web d’Openclassrooms, je suis à la recherche d’un premier emploi dans ce domaine. Ayant eu l’opportunité d’acquérir de nombreuses compétences grâce aux projets réalisés durant cette formation, j’ai à cœur de les mettre au plus vite en pratique.
                     </p>
                 </InfosBlock>
                 <InfosBlock>
@@ -83,7 +114,7 @@ function Home() {
                 <InfosBlock>
                   <h3> Mes compétences et réalisations </h3>
                     <p>
-                      Vous pouvez retrouver mes réalisations en cliquant sur l'icône GitHub présente en bas de page
+                      Pour une liste exhaustive de mes compétences, veuillez vous référer à mon CV accessible en cliquant sur le lien en haut de page.Vous pouvez retrouver mes réalisations en cliquant sur l'icône GitHub présente en bas de page
                     </p>
                 </InfosBlock>
         </InfosContainer>
