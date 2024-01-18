@@ -31,18 +31,12 @@ const PageSubtitle = styled.p`
 
 const AboutMe = styled.h2`
   font-size: 30px;
-  width: 6.5%;
+  width: 130px;
   margin-left: 6%;
   background: linear-gradient(to left, #ffb6c1, #cbc3e3 100%);
   background-position: 0 100%;
   background-size: 100% 2px;
   background-repeat: repeat-x;
-  @media(max-width: 1280px) {
-    width: 15%;
-  }
-  @media(max-width: 768px) {
-    width: 25%;
-  }
 `
 
 const InfosContainer = styled.div`
@@ -117,7 +111,7 @@ function Home() {
                 <InfosBlock>
                   <h3> Mes objectifs </h3>
                     <p>
-                      J’ai pour objectif de devenir freelance après avoir acquis une expérience solide en entreprise et j’envisage la possibilité de m’installer au Japon pour pratiquer ce métier à terme.
+                      J’ai pour objectif de devenir freelance après avoir acquis une expérience solide en entreprise et j’envisage la possibilité de devenir un développeur Fullstack à terme.
                     </p>
                 </InfosBlock>
                 <InfosBlock>
