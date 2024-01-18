@@ -27,7 +27,7 @@ const NavBar = styled.div`
 const HomeLogo = styled.img`
     height: 250px;
     margin-left: 3%;
-    @media(max-width: 768px) {
+    @media(max-width: 1280px) {
         margin-left: 0%;
     }
 `

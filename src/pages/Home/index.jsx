@@ -36,7 +36,13 @@ const AboutMe = styled.h2`
   background: linear-gradient(to left, #ffb6c1, #cbc3e3 100%);
   background-position: 0 100%;
   background-size: 100% 2px;
-  background-repeat: repeat-x;    
+  background-repeat: repeat-x;
+  @media(max-width: 1280px) {
+    width: 15%;
+  }
+  @media(max-width: 768px) {
+    width: 25%;
+  }
 `
 
 const InfosContainer = styled.div`
@@ -59,11 +65,11 @@ const InfosBlock = styled.div`
   // background-color: #CBC3E3;
   box-shadow: 12px 12px 8px 1px #cbc3e3;
   @media(max-width: 1280px) {
-    margin-bottom: 4%;
+    margin-bottom: 8%;
   }
   @media(max-width: 768px) {
-    width: 90%;
-    margin: 0% 2% 8% 2%;
+    width: 85%;
+    margin: 0% 2% 8% 3%;
   }
 `
 
@@ -71,11 +77,14 @@ const MoreInfosBlock = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 2%;
-  @media(max-width: 768px) {
-    display: none;
+  @media(max-width: 1280px) {
+    margin: 2% 5% 0% 5%;
   }
 `
 
+const MoreInfosText = styled.p`
+  text-align: center;
+`
 
 function Home() {
     return (
@@ -119,9 +128,9 @@ function Home() {
                 </InfosBlock>
         </InfosContainer>
         <MoreInfosBlock>
-          <p>
+          <MoreInfosText>
           Pour en savoir plus, je vous invite à visiter mes différents réseaux ou à me contacter directement par téléphone ou par mail.
-          </p>
+          </MoreInfosText>
         </MoreInfosBlock>
       </GlobalContainer>
     );
