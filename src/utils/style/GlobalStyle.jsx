@@ -22,6 +22,9 @@ const StyledGlobalStyle = createGlobalStyle`
     p {
         font-size: 18px;
         text-align: justify;
+        @media(max-width: 768px) {
+            font-size: 16px;
+        }
     }
 `
 
