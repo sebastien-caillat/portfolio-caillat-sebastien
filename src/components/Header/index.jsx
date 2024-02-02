@@ -1,4 +1,4 @@
-import logo from '../../assets/portfolio-logo.webp'
+import logo from '../../assets/portfolio-logo.png'
 import styled from 'styled-components'
 import { StyledLink } from '../../utils/style/Atoms'
 
