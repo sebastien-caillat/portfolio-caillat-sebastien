@@ -14,6 +14,20 @@ const StyledGlobalStyle = createGlobalStyle`
         overflow: auto;
     }
 
+    h1 {
+        font-size: 60px;
+        @media(max-width: 768px) {
+            font-size: 40px;
+        }
+    }
+
+    h2 {
+        font-size: 40px;
+        @media(max-width: 768px) {
+            font-size: 30px;
+        }
+    }
+
     h3 {
         font-size: 30px;
         margin-left: 3%;

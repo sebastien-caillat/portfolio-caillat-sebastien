@@ -18,21 +18,26 @@ const PageTitle = styled.h1`
   padding-bottom: 0.5%;
   margin-bottom: -0.5%;
   @media(max-width: 768px) {
-    padding-bottom: 3%;
+    // padding-bottom: 3%;
   }
 `
 
 const PageSubtitle = styled.p`
-  font-size: 20px;
+  font-size: 30px;
   @media(max-width: 768px) {
     margin-top: 2%;
   }
 `
 
 const AboutMe = styled.h2`
-  font-size: 30px;
-  width: 130px;
   margin-left: 25%;
+  @media(max-width: 1280px) {
+    margin-left: 15%;
+  }
+  @media(max-width: 1280px) {
+    margin-left: 0%;
+    text-align: center;
+  }
 `
 
 const InfosContainer = styled.div`
