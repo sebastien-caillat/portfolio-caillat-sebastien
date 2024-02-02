@@ -1,21 +1,24 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import colors from './colors';
 
 export const StyledLink = styled(Link)`
-    font-size: 22px;
-    line-height: 3.5;
-    display: flex;
-    align-items: flex-end;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 2;
     text-decoration: none;
-    margin-left: 57px;
-    margin-right: 10px;
-    @media(max-width: 768px) {
-        margin-bottom: 10%;
-        font-weight: bold;
-        margin-left: 80px;
-        margin-right: 24px;
+    color: ${colors.secondary};
+    @media(max-width: 1280px) {
+        font-size: 50px;
     }
-    &:hover{
-        text-decoration-line: underline;
+    @media(max-width: 768px) {
+        font-size: 40px;
+    }
+    &:visited {
+        color: ${colors.secondary};
+    }
+    &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
     }
 `

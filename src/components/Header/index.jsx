@@ -1,34 +1,51 @@
-import logo from '../../assets/portfolio-logo.svg'
+import logo from '../../assets/portfolio-logo.webp'
 import styled from 'styled-components'
 import { StyledLink } from '../../utils/style/Atoms'
 
-const NavContainer = styled.nav`
+const NavContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    margin-bottom: -2%;
+    height: 800px;
+    background: linear-gradient(to bottom right, #d7d2cc 0%, #304352 100%);
+    margin-bottom: 2%; 
+    @media(max-width: 1280px) {
+        height: 600px;
+    }
     @media(max-width: 768px) {
+        height: 500px;
         flex-direction: column;
-        margin-bottom: 0%;
+        align-items: center;
     }
 `
 
 const NavBar = styled.div`
     display: flex;
-    position: relative;
-    align-items: center;
-    margin-right: 5.2%;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-top: 2%;
+    margin-left: 7%;
     @media(max-width: 768px) {
-        justify-content: center;
-        right: 4.5%
+        align-items: center;
+        margin-left: 0%;
     }
 `
 
 const HomeLogo = styled.img`
-    height: 250px;
-    margin-left: 3%;
+    height: 425px;
+    position: relative;
+    top: 24%;
+    margin-right: 7%;
     @media(max-width: 1280px) {
-        margin-left: 0%;
+        height: 300px;
+    }
+    @media(max-width: 768px) {
+        width: 150px;
+        height: 200px;
+        margin-right: 0%;
+        margin-bottom: 3%;
+        top: 0%;
     }
 `
 
@@ -38,7 +55,10 @@ function Header() {
             <HomeLogo src={logo} alt='logo-portfolio' />
             <NavBar>
                 <StyledLink to='/'>
-                    Accueil
+                    ACCUEIL
+                </StyledLink>
+                <StyledLink to='realisations'>
+                    REALISATIONS
                 </StyledLink>
                 <StyledLink onClick={() => { window.location.href = 'https://www.docdroid.net/6PjO6Pt/cv-caillat-sebastien-pdf' } }>
                     CV

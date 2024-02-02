@@ -18,53 +18,58 @@ const PageTitle = styled.h1`
   padding-bottom: 0.5%;
   margin-bottom: -0.5%;
   @media(max-width: 768px) {
-    display: none;
+    padding-bottom: 3%;
   }
 `
 
 const PageSubtitle = styled.p`
   font-size: 20px;
   @media(max-width: 768px) {
-    display: none;
+    margin-top: 2%;
   }
 `
 
 const AboutMe = styled.h2`
   font-size: 30px;
   width: 130px;
-  margin-left: 6%;
-  background: linear-gradient(to left, #ffb6c1, #cbc3e3 100%);
-  background-position: 0 100%;
-  background-size: 100% 2px;
-  background-repeat: repeat-x;
+  margin-left: 25%;
 `
 
 const InfosContainer = styled.div`
-  display: grid;
-  grid-column: 2;
-  grid-row: 2;
-  grid-template-columns: repeat(2, 1fr);
-  @media(max-width: 768px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 `
 const InfosBlock = styled.div`
-  width: 70%;
+  width: 50%;
   height: auto;
-  margin: 0% 0% 3% 12%;
-  padding: 0% 3% 0% 3%;
+  margin-bottom: 3%;
   border: 1px solid black;
   border-radius: 10px;
-  background: linear-gradient(160deg, #ffb6c1 2%, #cbc3e3 40%);
-  // background-color: #CBC3E3;
-  box-shadow: 12px 12px 8px 1px #cbc3e3;
   @media(max-width: 1280px) {
+    width: 70%;
     margin-bottom: 8%;
   }
   @media(max-width: 768px) {
     width: 85%;
     margin: 0% 2% 8% 3%;
   }
+`
+
+const InfosBlockTitleBox = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+  padding-top: 1%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: linear-gradient(160deg, #ffb6c1 2%, #cbc3e3 40%);
+`
+
+const InfosBlockText = styled.p`
+  text-indent: 5%;
+  padding: 0% 3% 0% 3%;
 `
 
 const MoreInfosBlock = styled.div`
@@ -78,6 +83,10 @@ const MoreInfosBlock = styled.div`
 
 const MoreInfosText = styled.p`
   text-align: center;
+`
+
+const CvRedirection = styled.a`
+  font-weight: bold;
 `
 
 function Home() {
@@ -96,29 +105,38 @@ function Home() {
               </AboutMe>
         <InfosContainer>
                 <InfosBlock>
-                  <h3> Mon parcours </h3>
-                    <p>
-                      Après des études littéraires et notamment l'obtention d'une licence en Lettres & Sciences Humaines, j'ai décidé de me réorienter dans le domaine du développement web à la recherche de challenge.Nouvellement diplômé de la formation Développeur Web d’Openclassrooms, je suis à la recherche d’un premier emploi dans ce domaine. Ayant eu l’opportunité d’acquérir de nombreuses compétences grâce aux projets réalisés durant cette formation, j’ai à cœur de les mettre au plus vite en pratique.
-                    </p>
+                  <InfosBlockTitleBox> 
+                    <h3>Mon Parcours</h3>
+                  </InfosBlockTitleBox>
+                  <InfosBlockText>
+                    Après l'obtention d'une licence en Lettres & Sciences Humaines, j'ai choisi de me réorienter en suivant la formation diplômante Développeur Web d’Openclassrooms. Je suis à la recherche d’un premier emploi dans ce domaine afin de mettre en pratique les compétences ainsi acquises.
+                  </InfosBlockText>
                 </InfosBlock>
                 <InfosBlock>
-                  <h3> Mes attentes </h3>
-                    <p>
-                      Passionné de culture japonaise et de jeux vidéo depuis mon plus jeune âge je souhaiterais mettre mes compétences en développement web au service d'une entreprise opérant dans ces secteurs d’activité.
-                      J’affectionne particulièrement l’idée de travailler au sein d’une équipe réduite, privilégiant donc les petites et moyennes entreprises aux grands groupes.
-                    </p>
+                  <InfosBlockTitleBox> 
+                    <h3>Mes attentes</h3>
+                  </InfosBlockTitleBox>
+                  <InfosBlockText>
+                  Passionné de culture japonaise et de jeux vidéos, je souhaiterais travailler sur des projets en lien avec ces passions. J’apprécie l’idée de travailler au sein d’une équipe réduite afin d'avoir un contact direct avec clients et collègues.
+                  </InfosBlockText>
                 </InfosBlock>
                 <InfosBlock>
-                  <h3> Mes objectifs </h3>
-                    <p>
-                      J’ai pour objectif de devenir freelance après avoir acquis une expérience solide en entreprise et j’envisage la possibilité de devenir un développeur Fullstack à terme.
-                    </p>
+                  <InfosBlockTitleBox> 
+                    <h3>Mes objectifs</h3> 
+                  </InfosBlockTitleBox>
+                    <ul>
+                      <li>Me professionnaliser en participant à des projets variés</li>
+                      <li>Développer ma capacité à travailler en équipe</li>
+                      <li>Acquérir les savoirs et savoirs-faire nécessaire pour devenir développeur Fullstack</li>
+                    </ul>
                 </InfosBlock>
                 <InfosBlock>
-                  <h3> Mes compétences et réalisations </h3>
-                    <p>
-                      Pour une liste exhaustive de mes compétences, veuillez vous référer à mon CV accessible en cliquant sur le lien en haut de page.Vous pouvez retrouver mes réalisations en cliquant sur l'icône GitHub présente en bas de page
-                    </p>
+                  <InfosBlockTitleBox> 
+                    <h3>Mes compétences et réalisations</h3> 
+                  </InfosBlockTitleBox>
+                  <InfosBlockText>
+                    Pour une liste exhaustive de mes compétences, veuillez vous référer à mon <CvRedirection href="https://www.docdroid.net/6PjO6Pt/cv-caillat-sebastien-pdf">CV</CvRedirection>. Mes réalisations dans le cadre de la formation sont disponibles sur mon GitHub accessible en bas de page et les plus récentes sont accessibles ici
+                  </InfosBlockText>
                 </InfosBlock>
         </InfosContainer>
         <MoreInfosBlock>

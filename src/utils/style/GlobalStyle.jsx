@@ -8,7 +8,6 @@ const StyledGlobalStyle = createGlobalStyle`
 
     body {
         color: ${colors.primary};
-        background-color: ${colors.background};
         width: 100%;
         margin: 0;
         padding: 0;
@@ -16,14 +15,25 @@ const StyledGlobalStyle = createGlobalStyle`
     }
 
     h3 {
-        font-size: 24px;
+        font-size: 30px;
+        margin-left: 3%;
+        @media(max-width: 768px) {
+            font-size: 22px;
+        }
     }
 
     p {
-        font-size: 18px;
+        font-size: 22px;
         text-align: justify;
         @media(max-width: 768px) {
-            font-size: 16px;
+            font-size: 18px;
+        }
+    }
+
+    li {
+        font-size: 22px;
+        @media(max-width: 768px) {
+            font-size: 18px;
         }
     }
 `
