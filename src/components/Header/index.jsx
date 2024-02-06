@@ -60,7 +60,7 @@ function Header() {
                 <StyledLink to='realisations'>
                     REALISATIONS
                 </StyledLink>
-                <StyledLink onClick={() => { window.location.href = 'https://www.docdroid.net/6PjO6Pt/cv-caillat-sebastien-pdf' } }>
+                <StyledLink onClick={() => { window.location.href = 'https://sebastien-caillat.tiiny.site/' } }>
                     CV
                 </StyledLink>
             </NavBar>
