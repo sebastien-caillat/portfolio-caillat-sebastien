@@ -4,11 +4,22 @@ import { Link } from  "react-router-dom";
 
     const GlobalContainer = styled.div`
     width: 100%;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
     `
 
+    const TitleContainer = styled.div`
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    `
     const RealisationTitle = styled.h1`
         text-align: center;
+        background: linear-gradient(to left, #ffb6c1, #cbc3e3 100%);
+        background-position: 0 90%;
+        background-size: 100% 2px;
+        background-repeat: repeat-x; 
+        padding-bottom: 0.5%;
+        margin-bottom: -0.5%;
     `
 
     const  ProjectsSection = styled.div`
@@ -21,6 +32,11 @@ import { Link } from  "react-router-dom";
         height: 500px;
         background-color: #f5f5f5;
         border-radius: 30px;
+        margin-top: 4%;
+        @media(max-width: 768px) {
+            width: 350px;
+            height: 350px;
+        }
     `
 
     const ProjectCardImg = styled.img`
@@ -40,12 +56,18 @@ import { Link } from  "react-router-dom";
     `
 
     const ProjectCardTitle = styled.h2`
+        @media(max-width: 768px) {
+            font-size: 24px;
+        }
     `
     
     const ProjectCardText = styled.p`
         width: 90%;
         word-break: break-word;
         margin-top: -5%;
+        @media(max-width: 768px) {
+            font-size: 16px;
+        }
     `
 
     const  ProjectVisitButton = styled(Link)`
@@ -62,6 +84,9 @@ import { Link } from  "react-router-dom";
         &:hover{
           transform: scale(1.1);  
         }
+        @media(max-width: 768px) {
+            width: 60%;
+        }
     `
 
     const websitesData = websitesdata;
@@ -69,7 +94,9 @@ import { Link } from  "react-router-dom";
 function Realisation() {
     return(
         <GlobalContainer>
-            <RealisationTitle>Réalisations</RealisationTitle>
+            <TitleContainer>
+                <RealisationTitle>Réalisations</RealisationTitle>
+            </TitleContainer>
             <ProjectsSection>
                 {websitesData.map(({ id, title, description,imgUrl, linkUrl }) => (
                     <ProjectCard key={id}>

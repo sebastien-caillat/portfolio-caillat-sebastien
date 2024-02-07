@@ -7,7 +7,7 @@ const NavContainer = styled.div`
     justify-content: center;
     width: 100%;
     height: 800px;
-    background: linear-gradient(to bottom right, #d7d2cc 0%, #304352 100%);
+    background: linear-gradient(to bottom right, #b9abcf 25%, #2b1331 100%);
     margin-bottom: 2%; 
     @media(max-width: 1280px) {
         height: 600px;
@@ -55,10 +55,10 @@ function Header() {
             <HomeLogo src={logo} alt='logo-portfolio' />
             <NavBar>
                 <StyledLink to='/'>
-                    ACCUEIL
+                    Accueil
                 </StyledLink>
                 <StyledLink to='realisations'>
-                    REALISATIONS
+                    Réalisations
                 </StyledLink>
                 <StyledLink onClick={() => { window.location.href = 'https://sebastien-caillat.tiiny.site/' } }>
                     CV

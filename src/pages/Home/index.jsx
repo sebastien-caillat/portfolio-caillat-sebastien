@@ -18,7 +18,7 @@ const PageTitle = styled.h1`
   padding-bottom: 0.5%;
   margin-bottom: -0.5%;
   @media(max-width: 768px) {
-    // padding-bottom: 3%;
+    padding-bottom: 3%;
   }
 `
 
@@ -69,7 +69,7 @@ const InfosBlockTitleBox = styled.div`
   padding-top: 1%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background: linear-gradient(160deg, #ffb6c1 2%, #cbc3e3 40%);
+  background: linear-gradient(to bottom right, #f39fdc 0%, #eab5e1 30%);
 `
 
 const InfosBlockText = styled.p`
@@ -80,9 +80,12 @@ const InfosBlockText = styled.p`
 const MoreInfosBlock = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 2%;
+  margin-bottom: 1%;
   @media(max-width: 1280px) {
     margin: 2% 5% 0% 5%;
+  }
+  @media(max-width: 768px) {
+    margin: -3% 5% 0% 5%; 
   }
 `
 
@@ -140,7 +143,7 @@ function Home() {
                     <h3>Mes compétences et réalisations</h3> 
                   </InfosBlockTitleBox>
                   <InfosBlockText>
-                    Pour une liste exhaustive de mes compétences, veuillez vous référer à mon <CvRedirection href="https://www.docdroid.net/6PjO6Pt/cv-caillat-sebastien-pdf">CV</CvRedirection>. Mes réalisations dans le cadre de la formation sont disponibles sur mon GitHub accessible en bas de page et les plus récentes sont accessibles ici
+                    Pour une liste exhaustive de mes compétences, veuillez vous référer à mon <CvRedirection href="https://sebastien-caillat.tiiny.site/">CV</CvRedirection>. Mes réalisations dans le cadre de la formation sont disponibles sur mon GitHub accessible en bas de page et les plus récentes sont accessibles ici
                   </InfosBlockText>
                 </InfosBlock>
         </InfosContainer>
