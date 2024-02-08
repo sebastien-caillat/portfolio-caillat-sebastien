@@ -10,6 +10,7 @@ const TitleContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `
+
 const PageTitle = styled.h1`
   background: linear-gradient(to left, #ffb6c1, #cbc3e3 100%);
   background-position: 0 90%;
