@@ -50,7 +50,6 @@ const StyledGlobalStyle = createGlobalStyle`
 
     h3 {
         font-size: 30px;
-        margin-left: 3%;
         font-family: 'Libre Baskerville', serif;
         font-style: italic;
         @media(max-width: 768px) {
@@ -60,7 +59,7 @@ const StyledGlobalStyle = createGlobalStyle`
 
     p {
         font-size: 20px;
-        text-align: justify;
+        // text-align: justify;
         font-family: 'Libre Baskerville', serif;
         @media(max-width: 768px) {
             font-size: 18px;

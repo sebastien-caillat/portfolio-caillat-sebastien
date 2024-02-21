@@ -7,7 +7,7 @@ export const StyledLink = styled(Link)`
     font-weight: bold;
     line-height: 2;
     text-decoration: none;
-    color: ${colors.secondary};
+    color: ${colors.primary};
     @media(max-width: 1280px) {
         font-size: 50px;
     }
@@ -15,7 +15,7 @@ export const StyledLink = styled(Link)`
         font-size: 40px;
     }
     &:visited {
-        color: ${colors.secondary};
+        color: ${colors.primary};
     }
     &:hover {
         text-decoration: underline;

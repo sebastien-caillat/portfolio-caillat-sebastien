@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import colors from "../../utils/style/colors";
 
 import { FaGithubSquare, FaPhoneAlt, FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
@@ -7,7 +8,7 @@ const linkedInUrl = 'https://www.linkedin.com/in/sebastien-caillat/';
 const githubUrl = 'https://github.com/sebastien-caillat';
 
 const Box = styled.div`
-    background: #252525;
+    background: ${colors.background};
     position: absolute;
     width: 100%;
 `;
@@ -47,7 +48,7 @@ function Footer() {
         <Box>
             <h1
                 style={{
-                    color: "#fff",
+                    color: "#a0aec0",
                     textAlign: "center",
                     marginTop: "30px",
                 }}

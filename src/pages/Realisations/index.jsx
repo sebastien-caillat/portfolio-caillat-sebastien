@@ -1,10 +1,13 @@
 import styled from "styled-components";
 import websitesdata from "../../assets/data/websitesdata.json";
 import { Link } from  "react-router-dom";
+import colors from "../../utils/style/colors";
 
     const GlobalContainer = styled.div`
     width: 100%;
-    margin-bottom: 4%;
+    padding-bottom: 4%;
+    margin-top: -2%;
+    background: ${colors.backgroundmain};
     `
 
     const TitleContainer = styled.div`
@@ -30,7 +33,7 @@ import { Link } from  "react-router-dom";
     const ProjectCard = styled.div`
         width: 500px;
         height: 500px;
-        background-color: #f5f5f5;
+        background-color: ${colors.backgroundcard};
         border-radius: 30px;
         margin-top: 4%;
         @media(max-width: 768px) {
@@ -56,6 +59,7 @@ import { Link } from  "react-router-dom";
     `
 
     const ProjectCardTitle = styled.h2`
+        color: ${colors.secondary};
         @media(max-width: 768px) {
             font-size: 24px;
         }
@@ -65,6 +69,7 @@ import { Link } from  "react-router-dom";
         width: 90%;
         word-break: break-word;
         margin-top: -5%;
+        color: ${colors.secondary};
         @media(max-width: 768px) {
             font-size: 16px;
         }

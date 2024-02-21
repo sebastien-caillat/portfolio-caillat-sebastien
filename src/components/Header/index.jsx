@@ -1,13 +1,14 @@
 import logo from '../../assets/portfolio-logo.png'
 import styled from 'styled-components'
 import { StyledLink } from '../../utils/style/Atoms'
+import colors from '../../utils/style/colors';
 
 const NavContainer = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
     height: 800px;
-    background: linear-gradient(to bottom right, #b9abcf 25%, #2b1331 100%);
+    background-color: ${colors.background};
     margin-bottom: 2%; 
     @media(max-width: 1280px) {
         height: 600px;
