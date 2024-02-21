@@ -59,7 +59,11 @@ const StyledGlobalStyle = createGlobalStyle`
 
     p {
         font-size: 20px;
-        // text-align: justify;
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
         font-family: 'Libre Baskerville', serif;
         @media(max-width: 768px) {
             font-size: 18px;
@@ -69,6 +73,11 @@ const StyledGlobalStyle = createGlobalStyle`
     li {
         font-size: 22px;
         font-family: 'Libre Baskerville', serif;
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
         @media(max-width: 768px) {
             font-size: 18px;
         }

@@ -23,12 +23,17 @@ import figmalogo from "../../assets/icons/figma.svg";
 import strapilogo from "../../assets/icons/strapi.svg";
 import nextjslogo from "../../assets/icons/nextjs.svg";
 
+
+// Styled components for the global container
+
 const GlobalContainer = styled.div`
   width: 100%;
   padding-bottom: 1%;
   background: ${colors.backgroundmain};
   margin-top: -2%;
 `
+
+// Styled components for the Title section
 
 const TitleContainer = styled.div`
   display: flex;
@@ -42,7 +47,7 @@ const PageTitle = styled.h1`
   background-size: 100% 2px;
   background-repeat: repeat-x; 
   padding-bottom: 0.5%;
-  margin-bottom: -0.5%;
+  margin-bottom: -1%;
   @media(max-width: 768px) {
     padding-bottom: 3%;
   }
@@ -54,6 +59,8 @@ const PageSubtitle = styled.p`
     margin-top: 2%;
   }
 `
+
+// Styled components for the Infos section
 
 const InfosContainer = styled.div`
   display: flex;
@@ -79,6 +86,8 @@ const InfosBlockTitle = styled.h2`
 const InfosBlockSubtitle = styled.h3`
 `
 
+// Styled components for the Skills section
+
 const SkillsSection = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -96,6 +105,45 @@ const SkillsIcons = styled.img`
       transform: scale(1.1);
     }
 `;
+
+
+/**
+ * Styled components for a tooltip container and tooltip text.
+ * TooltipContainer is a styled div that serves as the container for the tooltip.
+ * TooltipText is a styled span that represents the actual tooltip text.
+ * The tooltip text is hidden by default and becomes visible on hover over the TooltipContainer.
+ */
+
+const TooltipContainer = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
+const TooltipText = styled.span`
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; 
+  left: 50%; 
+  margin-left: -60px; 
+
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  ${TooltipContainer}:hover & {
+    visibility: visible;
+    opacity: 1;
+  }
+`;
+
+// Text style for the Infos section
 
 const InfosBlockText = styled.p`
   text-indent: 3%;
@@ -123,24 +171,40 @@ const CvRedirection = styled.a`
   }
 `
 
+/**
+ * Functional component that displays a tooltip when hovering over the children.
+ * @param {{children}} children - The content that will trigger the tooltip on hover.
+ * @param {{string}} text - The text to display in the tooltip.
+ * @returns JSX element representing the tooltip component.
+ */
+
+const Tooltip = ({ children, text }) => (
+  <TooltipContainer>
+    {children}
+    <TooltipText>{text}</TooltipText>
+  </TooltipContainer>
+);
+
 function Home() {
     return (
       <GlobalContainer>
+
         <TitleContainer>
-            <PageTitle>
-              Sébastien Caillat
-            </PageTitle>
-            <PageSubtitle>
-              Développeur Web
-            </PageSubtitle>
-            </TitleContainer>
+          <PageTitle>
+            Sébastien Caillat
+          </PageTitle>
+          <PageSubtitle>
+            Développeur Web
+          </PageSubtitle>
+        </TitleContainer>
+
         <InfosContainer>
                 <InfosBlock>
                   <InfosBlockTitleBox> 
                     <InfosBlockTitle>Mon Parcours</InfosBlockTitle>
                   </InfosBlockTitleBox>
                   <InfosBlockText>
-                    Après l'obtention d'une licence en Lettres & Sciences Humaines, j'ai choisi de me réorienter en suivant la formation diplômante Développeur Web d’Openclassrooms. Je suis à la recherche d’un premier emploi dans ce domaine afin de mettre en pratique les compétences ainsi acquises.
+                    Après l'obtention d'une licence en Lettres & Sciences Humaines, j'ai choisi de me réorienter en suivant la formation diplômante Développeur Web délivrée par Openclassrooms. Je suis à la recherche d’un premier emploi dans ce domaine afin de mettre en pratique les compétences ainsi acquises.
                   </InfosBlockText>
                 </InfosBlock>
                 <InfosBlock>
@@ -172,32 +236,68 @@ function Home() {
                 <InfosBlock>
                   <InfosBlockSubtitle>Niveau avancé</InfosBlockSubtitle>
                     <SkillsSection>
-                      <SkillsIcons src={htmllogo} alt="html" />
-                      <SkillsIcons src={csslogo} alt="css" />
+                      <Tooltip text="HTML5">
+                        <SkillsIcons src={htmllogo} alt="html" />
+                      </Tooltip>
+                      <Tooltip text="CSS3">
+                        <SkillsIcons src={csslogo} alt="css" />
+                      </Tooltip>
                     </SkillsSection>
                   <InfosBlockSubtitle>Niveau intermédiaire</InfosBlockSubtitle>
                     <SkillsSection>
+                      <Tooltip text="Javascript">
                       <SkillsIcons src={jslogo} alt="javascript" />
-                      <SkillsIcons src={nodejslogo} alt="nodejs" />
-                      <SkillsIcons src={reactlogo} alt="react" />
-                      <SkillsIcons src={mongodblogo} alt="mongodb" />
-                      <SkillsIcons src={gitlogo} alt="git" />
-                      <SkillsIcons src={githublogo} alt="github" />
-                      <SkillsIcons src={restapilogo} alt="restapi" />
-                      <SkillsIcons src={expresslogo} alt="express" />
-                      <SkillsIcons src={axioslogo} alt="axios" />
-                      <SkillsIcons src={jwtlogo} alt="jsonwebtoken" />
-                      <SkillsIcons src={bcryptlogo} alt="bcrypt" />
-                      <SkillsIcons src={sasslogo} alt="sass" />
+                      </Tooltip>
+                      <Tooltip text="Node.js">
+                        <SkillsIcons src={nodejslogo} alt="nodejs" />
+                      </Tooltip>
+                      <Tooltip text="React">
+                        <SkillsIcons src={reactlogo} alt="react" />
+                      </Tooltip>
+                      <Tooltip text="MongoDB">
+                        <SkillsIcons src={mongodblogo} alt="mongodb" />
+                      </Tooltip>
+                      <Tooltip text="Git">
+                        <SkillsIcons src={gitlogo} alt="git" />
+                      </Tooltip>
+                      <Tooltip text="Github">
+                        <SkillsIcons src={githublogo} alt="github" />
+                      </Tooltip>
+                      <Tooltip text="RestAPI">
+                        <SkillsIcons src={restapilogo} alt="restapi" />
+                      </Tooltip>
+                      <Tooltip text="Express">
+                        <SkillsIcons src={expresslogo} alt="express" />
+                      </Tooltip>
+                      <Tooltip text="Axios">
+                        <SkillsIcons src={axioslogo} alt="axios" />
+                      </Tooltip>
+                      <Tooltip text="JsonWebToken">
+                        <SkillsIcons src={jwtlogo} alt="jsonwebtoken" />
+                      </Tooltip>
+                      <Tooltip text="Bcrypt">
+                        <SkillsIcons src={bcryptlogo} alt="bcrypt" />
+                      </Tooltip>
+                      <Tooltip text="Sass">
+                        <SkillsIcons src={sasslogo} alt="sass" />
+                      </Tooltip>
                     </SkillsSection>
                   <InfosBlockSubtitle>Niveau débutant</InfosBlockSubtitle>
                     <SkillsSection>
-                      <SkillsIcons src={tslogo} alt="typescript" />
-                      <SkillsIcons src={figmalogo} alt="figma" />
+                      <Tooltip text="Typescript">
+                        <SkillsIcons src={tslogo} alt="typescript" />
+                      </Tooltip>
+                      <Tooltip text="Figma">
+                        <SkillsIcons src={figmalogo} alt="figma" />
+                      </Tooltip>
                     </SkillsSection>
                   <InfosBlockSubtitle>En cours d'apprentissage</InfosBlockSubtitle>
-                    <SkillsIcons src={strapilogo} alt="strapi" />
-                    <SkillsIcons src={nextjslogo} alt="nextjs" />
+                    <Tooltip text="Strapi">
+                      <SkillsIcons src={strapilogo} alt="strapi" />
+                    </Tooltip>
+                    <Tooltip text="Next.js">
+                      <SkillsIcons src={nextjslogo} alt="nextjs" />
+                    </Tooltip>
                 </InfosBlock>
         </InfosContainer>
         <MoreInfosBlock>
