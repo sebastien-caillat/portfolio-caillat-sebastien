@@ -27,7 +27,11 @@ import colors from "../../utils/style/colors";
 
     const  ProjectsSection = styled.div`
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        @media(max-width: 1024px) {
+            flex-direction: column;
+            align-items: center;
+        }
     `
 
     const ProjectCard = styled.div`
@@ -35,7 +39,7 @@ import colors from "../../utils/style/colors";
         height: 500px;
         background-color: ${colors.backgroundcard};
         border-radius: 30px;
-        margin-top: 4%;
+        margin: 4% 2% 0% 2%;
         @media(max-width: 768px) {
             width: 350px;
             height: 350px;
@@ -45,7 +49,7 @@ import colors from "../../utils/style/colors";
     const ProjectCardImg = styled.img`
         width: 100%;
         height: 55%;
-        object-fit: cover;
+        object-fit: fill;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
 
@@ -55,7 +59,7 @@ import colors from "../../utils/style/colors";
         display: flex;
         align-items: left;
         flex-direction: column;
-        margin-left: 4%;
+        margin: -4% 0% 2% 4%;
     `
 
     const ProjectCardTitle = styled.h2`
@@ -109,7 +113,7 @@ function Realisation() {
                         <ProjectCardInfos>
                             <ProjectCardTitle>{title}</ProjectCardTitle>
                             <ProjectCardText>{description}</ProjectCardText>
-                            <ProjectVisitButton to={linkUrl}>View Website</ProjectVisitButton>
+                            <ProjectVisitButton to={linkUrl}>Voir le site</ProjectVisitButton>
                         </ProjectCardInfos>
                         
                     </ProjectCard>

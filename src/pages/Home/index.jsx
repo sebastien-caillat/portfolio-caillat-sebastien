@@ -6,6 +6,7 @@ import csslogo from "../../assets/icons/css.svg";
 
 import jslogo from "../../assets/icons/javascript.svg";
 import nodejslogo from "../../assets/icons/nodejs.svg";
+import strapilogo from "../../assets/icons/strapi.svg";
 import gitlogo from "../../assets/icons/git.svg";
 import githublogo from "../../assets/icons/github.svg";
 import reactlogo from "../../assets/icons/react.svg";
@@ -20,7 +21,7 @@ import bcryptlogo from "../../assets/icons/bcrypt.svg";
 import tslogo from "../../assets/icons/typescript.svg";
 import figmalogo from "../../assets/icons/figma.svg";
 
-import strapilogo from "../../assets/icons/strapi.svg";
+import redux from "../../assets/icons/redux.svg";
 import nextjslogo from "../../assets/icons/nextjs.svg";
 
 
@@ -254,6 +255,9 @@ function Home() {
                       <Tooltip text="React">
                         <SkillsIcons src={reactlogo} alt="react" />
                       </Tooltip>
+                      <Tooltip text="Strapi">
+                      <SkillsIcons src={strapilogo} alt="strapi" />
+                      </Tooltip>
                       <Tooltip text="MongoDB">
                         <SkillsIcons src={mongodblogo} alt="mongodb" />
                       </Tooltip>
@@ -291,9 +295,9 @@ function Home() {
                         <SkillsIcons src={figmalogo} alt="figma" />
                       </Tooltip>
                     </SkillsSection>
-                  <InfosBlockSubtitle>En cours d'apprentissage</InfosBlockSubtitle>
-                    <Tooltip text="Strapi">
-                      <SkillsIcons src={strapilogo} alt="strapi" />
+                  <InfosBlockSubtitle>Interessé par</InfosBlockSubtitle>
+                    <Tooltip text="Redux">
+                      <SkillsIcons src={redux} alt="redux" />
                     </Tooltip>
                     <Tooltip text="Next.js">
                       <SkillsIcons src={nextjslogo} alt="nextjs" />

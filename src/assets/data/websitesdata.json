@@ -5,5 +5,12 @@
         "description": "Site vitrine pour le compte d'un pâtissier réalisé avec React",
         "linkUrl": "https://www.la-titisserie.com/",
         "imgUrl": "https://i.ibb.co/tJhzdBX/titisserie.webp"
+    },
+
+    {
+        "id": "5d8q4f3c",
+        "title": "Sneakers Surface",
+        "description": "Site e-commerce avec système d'authentification et gestion de produits réalisé avec React et Strapi",
+        "imgUrl": "https://i.ibb.co/98z3Kq1/sneakers-1.webp"
     }
 ]
