@@ -61,7 +61,7 @@ function Header() {
                 <StyledLink to='realisations'>
                     Réalisations
                 </StyledLink>
-                <StyledLink onClick={() => { window.location.href = 'https://sebastien-caillat.tiiny.site/' } }>
+                <StyledLink onClick={() => { window.location.href = 'https://amber-kandace-43.tiiny.site/' } }>
                     CV
                 </StyledLink>
             </NavBar>

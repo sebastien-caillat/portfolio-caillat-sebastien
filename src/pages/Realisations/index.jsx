@@ -17,7 +17,7 @@ import colors from "../../utils/style/colors";
     `
     const RealisationTitle = styled.h1`
         text-align: center;
-        background: linear-gradient(to left, #ffb6c1, #cbc3e3 100%);
+        background: linear-gradient(to left, ${colors.accent}, ${colors.accent} 100%);
         background-position: 0 90%;
         background-size: 100% 2px;
         background-repeat: repeat-x; 
@@ -40,15 +40,18 @@ import colors from "../../utils/style/colors";
         background-color: ${colors.backgroundcard};
         border-radius: 30px;
         margin: 4% 2% 0% 2%;
+        display: flex;
+        flex-direction: column;
         @media(max-width: 768px) {
             width: 350px;
             height: 350px;
+            margin: 7% 0% 4% 0%;
         }
     `
 
     const ProjectCardImg = styled.img`
         width: 100%;
-        height: 55%;
+        height: 100%;
         object-fit: fill;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
@@ -57,9 +60,11 @@ import colors from "../../utils/style/colors";
 
     const ProjectCardInfos = styled.div`
         display: flex;
-        align-items: left;
+        height: 100%;
+        justify-content: space-between;
+        padding: 16px;
         flex-direction: column;
-        margin: -4% 0% 2% 4%;
+        margin: -4% 0% 0% 0%;
     `
 
     const ProjectCardTitle = styled.h2`

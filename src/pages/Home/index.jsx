@@ -231,7 +231,7 @@ function Home() {
                     <InfosBlockTitle>Mes compétences et réalisations</InfosBlockTitle> 
                   </InfosBlockTitleBox>
                   <InfosBlockText>
-                    Pour une liste exhaustive de mes compétences, veuillez vous référer à mon <CvRedirection href="https://sebastien-caillat.tiiny.site/">CV</CvRedirection>. Mes réalisations dans le cadre de la formation sont disponibles sur mon GitHub accessible en bas de page et les plus récentes sont accessibles sur la page Réalisations.
+                    Pour une liste exhaustive de mes compétences, veuillez vous référer à mon <CvRedirection href="https://amber-kandace-43.tiiny.site/">CV</CvRedirection>. Mes réalisations dans le cadre de la formation sont disponibles sur mon GitHub accessible en bas de page et les plus récentes sont accessibles sur la page Réalisations.
                   </InfosBlockText>
                 </InfosBlock>
                 <InfosBlock>
