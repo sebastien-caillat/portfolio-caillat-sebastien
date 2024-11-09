@@ -294,13 +294,13 @@ function Home() {
                       <Tooltip text="Figma">
                         <SkillsIcons src={figmalogo} alt="figma" />
                       </Tooltip>
+                      <Tooltip text="Next.js">
+                      <SkillsIcons src={nextjslogo} alt="nextjs" />
+                    </Tooltip>
                     </SkillsSection>
                   <InfosBlockSubtitle>Interessé par</InfosBlockSubtitle>
                     <Tooltip text="Redux">
                       <SkillsIcons src={redux} alt="redux" />
-                    </Tooltip>
-                    <Tooltip text="Next.js">
-                      <SkillsIcons src={nextjslogo} alt="nextjs" />
                     </Tooltip>
                 </InfosBlock>
         </InfosContainer>
